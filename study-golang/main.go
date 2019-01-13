@@ -66,9 +66,6 @@ func show(s interface{}) {
 }
 
 
-
-
-
 // 構造体のデータを書き換えてい場合は＊をつける
 func (u *user) hit() {
   u.score++
@@ -232,4 +229,3 @@ func open_file()  {
   file.READ(data)
   fmt.Println(string(data))
 }
-
