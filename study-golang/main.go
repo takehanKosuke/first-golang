@@ -233,3 +233,29 @@ func open_file()  {
   fmt.Println(string(data))
 }
 
+
+
+
+// ↓Goはenumはないけどenumっぽいものはできるよ
+
+type Status int
+
+type User struct {
+  Name    string
+  Age     int
+  Status  Status
+}
+
+const (
+  Nomal Status = iota
+  Admin
+  Ban
+)
+
+func main(){
+  User1 := User{"kosuke", 21, Nomal}
+  fmt.Println(User1)
+}
+
+// 〜出力〜
+// {kosuke 21 0}
