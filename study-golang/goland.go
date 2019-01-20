@@ -1,4 +1,4 @@
-package goland
+package main
 
 import (
 	"crypto/hmac"
@@ -40,10 +40,11 @@ func Server(apiKey, sign string, data []byte) {
 	h.Write(data)
 	expectedHMAC := hex.EncodeToString(h.Sum(nil))
 	fmt.Println(sign == expectedHMAC)
-	}
+}
+
+
 func main() {
 	b := []byte(`{"name": "koura", "age": 24}`)
-i9
 	var p Person
 	//↓.json.Unmarshalはjsonから構造体に変化させるもの
 	if err := json.Unmarshal(b, &p); err != nil {
@@ -58,7 +59,7 @@ i9
 
 
 	//hmac
-	const apiKey = "User1key"
+	const apiKey = "User1Key"
 	const apiSecret = "User1Secret"
 
 	data := []byte("data")
