@@ -66,9 +66,6 @@ func show(s interface{}) {
 }
 
 
-
-
-
 // 構造体のデータを書き換えてい場合は＊をつける
 func (u *user) hit() {
   u.score++
@@ -233,9 +230,6 @@ func open_file()  {
   fmt.Println(string(data))
 }
 
-
-
-
 // ↓Goはenumはないけどenumっぽいものはできるよ
 
 type Status int
@@ -256,6 +250,3 @@ func main(){
   User1 := User{"kosuke", 21, Nomal}
   fmt.Println(User1)
 }
-
-// 〜出力〜
-// {kosuke 21 0}
